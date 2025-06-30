@@ -42,8 +42,10 @@ export default function SignupCard() {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify(inputs),
-			});
+			}
+		);
 			const data = await res.json();
+			console.log('signup console',res,data)
 
 			if (data.error) {
 				showToast("Error", data.error, "error");
